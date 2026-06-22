@@ -1,0 +1,18 @@
+﻿geo,source_name,region,default_currency,query,candidate_cards,page_title,error,url,first_title,first_price
+Europe,eBay UK,UK,GBP,Dell Latitude 5420,80,Dell Latitude 5420 for sale | eBay,,https://www.ebay.co.uk/sch/i.html?_nkw=Dell+Latitude+5420&LH_ItemCondition=1500%7C2000%7C2500%7C3000&LH_BIN=1&_sop=12,Category,Available inventory £ 0 £ 1000+
+Europe,eBay Germany,DE,EUR,Dell Latitude 5420,2,Dell Latitude 5420 online kaufen | eBay,,https://www.ebay.de/sch/i.html?_nkw=Dell+Latitude+5420&LH_ItemCondition=1500%7C2000%7C2500%7C3000&LH_BIN=1&_sop=12,Shop on eBay,$20.00
+Europe,CeX UK,UK,GBP,iPhone 12,1,CeX (UK) : Stock search,,https://uk.webuy.com/search?stext=iPhone+12,Alternative Title,By Price to
+Europe,Back Market UK,UK,GBP,iPhone 12,0,Just a moment...,,https://www.backmarket.co.uk/en-gb/search?q=iPhone+12,,
+Europe,Refurbed DE,DE,EUR,iPhone 12,0,Suche,,https://www.refurbed.de/search/?query=iPhone+12,,
+Europe,Techbuyer UK,UK,GBP,Dell PowerEdge R740,15,Search results for: 'Dell PowerEdge R740' | Techbuyer,,https://www.techbuyer.com/uk/catalogsearch/result/?q=Dell+PowerEdge+R740,Dell PowerEdge R740/R740XD System Board,From £235.13 Product Code:1YM03-V1
+Europe,Bargain Hardware,UK,GBP,Dell PowerEdge R740,11,Search results for: 'Dell PowerEdge R740',,https://www.bargainhardware.co.uk/catalogsearch/result/?q=Dell+PowerEdge+R740,Dell PowerEdge R740/R740-XD 4xSFF Rear Cage,Excl. Tax £110.00 Incl. Tax £132.00 In stock
+Europe,ETB Technologies,UK,GBP,Dell PowerEdge R740,0,Just a moment...,,https://www.etb-tech.com/catalogsearch/result/?q=Dell+PowerEdge+R740,,
+Europe,Renewtech,EU,EUR,Dell PowerEdge R740,0,Search results for: 'Dell PowerEdge R740',,https://www.renewtech.com/catalogsearch/result/?q=Dell+PowerEdge+R740,,
+APAC,eBay Australia,AU,AUD,Dell Latitude 5420,80,Dell Latitude 5420 for sale | eBay,,https://www.ebay.com.au/sch/i.html?_nkw=Dell+Latitude+5420&LH_ItemCondition=1500%7C2000%7C2500%7C3000&LH_BIN=1&_sop=12,Category,Available inventory AU $ 0 AU $ 1000+
+APAC,eBay Singapore,SG,SGD,Dell Latitude 5420,80,Dell Latitude 5420 | eBay,,https://www.ebay.com.sg/sch/i.html?_nkw=Dell+Latitude+5420&LH_ItemCondition=1500%7C2000%7C2500%7C3000&LH_BIN=1&_sop=12,Category,Available inventory S$ 0 S$ 1290
+APAC,CeX Australia,AU,AUD,iPhone 12,1,CeX (AU) : Stock search,,https://au.webuy.com/search?stext=iPhone+12,Meta Title,By Price to
+APAC,Reebelo Australia,AU,AUD,iPhone 12,4,"Search results for ""iPhone 12"" | Reebelo Australia",,https://reebelo.com.au/search?q=iPhone+12,PRICE RANGE,$555.99
+APAC,Reebelo Singapore,SG,SGD,iPhone 12,0,"Search results for ""iPhone 12"" | Reebelo Singapore",,https://reebelo.sg/search?q=iPhone+12,,
+APAC,Phonebot,AU,AUD,iPhone 12,2,Search,,https://www.phonebot.com.au/search?q=iPhone+12,"0 Cart 0TotalA$0VIEW CARTCHECKOUT function initiateCheckoutDataLayer(){ dataLayer.push({ ecommerce: null }); dataLayer.push({""event"":""begin_checkout"",""ecommerce"":{""currency"":""AUD"",""value"":0,""items"":[]}}); }",$0
+APAC,Techbuyer Australia,AU,AUD,Dell PowerEdge R740,15,Search results for: 'Dell PowerEdge R740' | Techbuyer AU,,https://www.techbuyer.com/au/catalogsearch/result/?q=Dell+PowerEdge+R740,Dell PowerEdge R740/R740XD System Board,From $550.54 Product Code:1YM03-V1
+APAC,POS Central AU,AU,AUD,Ingenico iWL250,53,Best POS Hardware UK – Reliable Suppliers & Deals Online,,https://www.poscentral.com.au/search?q=Ingenico+iWL250,Sunmi NT311 80mm Kitchen Cloud [UK] - USB - LAN - WiFi - BT Black Printer (incl P/Cord [UK]),GBP £229.00
