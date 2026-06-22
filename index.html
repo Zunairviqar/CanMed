@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CanMed MCQs</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <aside class="sidebar left-panel">
+        <div class="brand">
+          <div>
+            <h1>CanMed MCQs</h1>
+            <p id="loadStatus">Loading question bank...</p>
+          </div>
+        </div>
+
+        <nav class="page-switcher" aria-label="App pages">
+          <button class="view-button active" data-view="questions" type="button">Questions</button>
+          <button class="view-button" data-view="dashboard" type="button">Dashboard</button>
+        </nav>
+
+        <div class="metrics-grid" aria-label="Progress summary">
+          <div class="metric">
+            <span>Total</span>
+            <strong id="metricTotal">0</strong>
+          </div>
+          <div class="metric">
+            <span>Done</span>
+            <strong id="metricDone">0</strong>
+          </div>
+          <div class="metric">
+            <span>Correct</span>
+            <strong id="metricCorrect">0</strong>
+          </div>
+          <div class="metric">
+            <span>Missed</span>
+            <strong id="metricWrong">0</strong>
+          </div>
+        </div>
+
+        <div class="progress-track" aria-label="Completion progress">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+
+        <div id="questionTools" class="question-tools">
+          <div class="toolbar block">
+            <input id="searchInput" type="search" placeholder="Search stem, answer, topic" autocomplete="off" />
+            <select id="categoryFilter" aria-label="Category filter">
+              <option value="all">All categories</option>
+            </select>
+          </div>
+
+          <div class="segmented" aria-label="Question status filter">
+            <button class="segment active" data-filter="all">All</button>
+            <button class="segment" data-filter="unanswered">Remaining</button>
+            <button class="segment" data-filter="wrong">Missed</button>
+            <button class="segment" data-filter="bookmarked">Saved</button>
+          </div>
+
+          <div class="navigator-header">
+            <span id="filteredCount" hidden>0 questions</span>
+            <button id="randomButton" class="random-button" title="Random question" type="button">Random Question</button>
+          </div>
+          <div class="navigator-pager" aria-label="Question list pagination">
+            <button id="previousTenPageButton" class="outline-button pager-button" aria-label="Back 10 pages" type="button">&#171;</button>
+            <button id="previousPageButton" class="outline-button pager-button" aria-label="Previous page" type="button">&#8249;</button>
+            <span id="pageLabel">Page 1 / 1</span>
+            <button id="nextPageButton" class="outline-button pager-button" aria-label="Next page" type="button">&#8250;</button>
+            <button id="nextTenPageButton" class="outline-button pager-button" aria-label="Forward 10 pages" type="button">&#187;</button>
+          </div>
+          <div id="questionGrid" class="question-grid" aria-label="Question navigator"></div>
+        </div>
+      </aside>
+
+      <main id="questionsView" class="question-panel app-view">
+        <header class="question-header">
+          <div>
+            <div id="questionEyebrow" class="eyebrow">Question</div>
+            <h2 id="questionTitle">Loading...</h2>
+          </div>
+          <div class="header-actions">
+            <button id="bookmarkButton" class="outline-button" type="button">Save</button>
+            <button id="resetQuestionButton" class="outline-button" type="button">Clear</button>
+          </div>
+        </header>
+
+        <section id="questionBody" class="content-block question-content"></section>
+
+        <div class="answer-zone">
+          <section class="answer-section">
+            <div class="answer-section-header">
+              <h3>Answers</h3>
+              <span id="answerState" class="state-pill">Not answered</span>
+            </div>
+            <div id="answerOptions" class="answer-options"></div>
+            <div class="attempt-actions">
+              <button id="submitButton" class="primary-button" type="button">Submit answer</button>
+              <button id="revealButton" class="outline-button" type="button">Reveal</button>
+            </div>
+          </section>
+
+          <section id="resultPanel" class="result-panel hidden" aria-live="polite">
+            <div id="resultBanner" class="result-banner"></div>
+            <div class="tabs" role="tablist" aria-label="Explanation sections">
+              <button class="tab active" data-tab="explanation" type="button">Explanation</button>
+              <button class="tab" data-tab="details" type="button">Details</button>
+              <button class="tab" data-tab="references" type="button">References</button>
+            </div>
+            <div id="explanationPanel" class="content-block tab-panel"></div>
+            <div id="detailsPanel" class="content-block tab-panel hidden"></div>
+            <div id="referencesPanel" class="content-block tab-panel hidden"></div>
+          </section>
+
+          <section class="notes-panel">
+            <h3>Question Notes</h3>
+            <div class="notes-grid">
+              <select id="confidenceSelect" aria-label="Confidence">
+                <option value="">Confidence</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+              <textarea id="noteInput" rows="4" placeholder="Notes for this question"></textarea>
+            </div>
+          </section>
+
+          <footer class="question-footer">
+            <button id="previousButton" class="outline-button" type="button">Previous</button>
+            <span id="positionLabel">0 / 0</span>
+            <button id="nextButton" class="primary-button" type="button">Next</button>
+          </footer>
+        </div>
+      </main>
+
+      <main id="dashboardView" class="dashboard-page app-view hidden">
+        <header class="dashboard-header">
+          <div>
+            <div class="eyebrow">Dashboard</div>
+            <h2>Study Progress</h2>
+          </div>
+        </header>
+
+        <section class="dashboard-section performance-section">
+          <h3>Performance</h3>
+          <div class="performance-layout">
+            <div class="stat-list performance-stats">
+              <div class="performance-metric accuracy"><span>Accuracy</span><strong id="accuracyMetric">0%</strong></div>
+              <div class="performance-metric remaining"><span>Remaining</span><strong id="remainingMetric">0</strong></div>
+              <div class="performance-metric saved"><span>Saved</span><strong id="bookmarkedMetric">0</strong></div>
+              <div class="performance-metric attempts"><span>Attempts</span><strong id="attemptMetric">0</strong></div>
+            </div>
+            <div class="pie-panel" aria-label="Performance pie chart">
+              <div id="performancePie" class="performance-pie" role="img" aria-label="Performance chart"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dashboard-section category-section">
+          <h3>Category Progress</h3>
+          <div id="categoryStats" class="category-stats"></div>
+        </section>
+
+        <section class="dashboard-section records-section">
+          <h3>Records</h3>
+          <div class="record-actions">
+            <button id="exportProgressButton" class="outline-button" type="button">Export progress</button>
+            <label class="file-button">
+              Import progress
+              <input id="importProgressInput" type="file" accept="application/json" />
+            </label>
+            <button id="resetAllButton" class="danger-button" type="button">Reset all</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
